@@ -6,10 +6,9 @@ from selenium.webdriver.common.by import By
 class CategoryDesks(MainPage):
     page_url = '/shop/category/desks-1'
 
-    def count_filters(self):
-        count = 3
+    def check_filters_quantity_on_page(self, number_of_filters: int):
         check_box = self.driver.find_elements(By.CSS_SELECTOR, 'div.flex-column.mb-3 div.form-check')
-        assert len(check_box) == count
+        assert len(check_box) == number_of_filters
 
     def checking_the_location(self):
         category_list = self.driver.find_element(By.CSS_SELECTOR, '[for="o_wsale_apply_list"]')

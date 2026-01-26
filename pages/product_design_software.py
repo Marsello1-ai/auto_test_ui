@@ -14,7 +14,7 @@ class DesignSoftware(MainPage):
         page_title = self.driver.find_element(By.CSS_SELECTOR, 'h1').text
         assert page_title == page_title_name_design
 
-    def buy_two_product(self):
+    def buy_two_products_and_check_they_are_in_cart(self):
         plus = self.driver.find_element(By.CSS_SELECTOR, '.fa.fa-plus')
         plus.click()
 
@@ -32,7 +32,7 @@ class DesignSoftware(MainPage):
         assert product == page_title_name_design
         assert count.get_attribute('value') == '2'
 
-    def delete_buy(self):
+    def check_card_is_empty_after_deleting_products(self):
         minus = self.driver.find_element(By.CSS_SELECTOR, '[title="Remove one"]')
         minus.click()
 
