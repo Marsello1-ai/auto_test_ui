@@ -1,4 +1,4 @@
-def test_cart_is_empty(cart_page):
+def test_checking_cart_is_empty(cart_page):
     cart_page.open_page()
     cart_page.empty_cart()
 

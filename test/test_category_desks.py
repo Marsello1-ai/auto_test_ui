@@ -1,6 +1,6 @@
-def test_count_filtes(category_desks):
+def test_count_filters(category_desks):
     category_desks.open_page()
-    category_desks.count_filters()
+    category_desks.check_filters_quantity_on_page(3)
 
 
 def test_checking_the_location(category_desks):
