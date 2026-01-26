@@ -6,7 +6,7 @@ from utils.test_data import value_number_cart, contact_text
 class CartPage(MainPage):
     page_url = '/shop/cart'
 
-    def empty_cart(self):
+    def check_cert_is_empty(self):
         product_in_cart = self.driver.find_element(By.CSS_SELECTOR, '[class="fa fa-shopping-cart fa-stack"] + sup').text
         assert product_in_cart == ''
 
