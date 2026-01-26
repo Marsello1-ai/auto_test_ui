@@ -14,7 +14,6 @@ def driver():
     chrome_driver.maximize_window()
     chrome_driver.implicitly_wait(7)
     yield chrome_driver
-    sleep(3)
 
 
 @pytest.fixture()
